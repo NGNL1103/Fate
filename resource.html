@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <title>臺灣學術倫理教育資源中心</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://ethics.nctu.edu.tw/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="https://ethics.nctu.edu.tw/static/rwd/css/styles.css" rel="stylesheet">  
+  <link href="css/font-awesome.css" rel="stylesheet">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ethics.nctu.edu.tw/static/bootstrap/js/bootstrap.min.js"></script>
+    
+  <style>
+
+body {
+    font-family :"微軟正黑體", Arial;
+}
+
+h1 {
+    font-weight:bold;
+}
+
+.headline {
+    color:#0086ce;
+    font-size:26px;
+    font-weight:bold;
+}
+
+
+.sb-slidebar ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.sb-slidebar li {
+  text-align: center;
+  line-height: 3;
+  border-bottom: 1px solid #41464c;
+}
+.sb-slidebar li:hover {
+  background-color: #fff;
+}
+.sb-slidebar a:hover{
+  text-decoration: none;
+    color: #000;  
+}
+.sb-slidebar a {
+  display: block;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8{
+    text-align: center;
+    width:12%;
+}
+
+.navbar-nav > li > a:hover{
+    background-color:#FFE300;
+    color:#0086ce;
+}
+
+@media screen and (max-width:767px){
+    .logo a img{
+        width:240px;
+    }
+
+    .edu_logo{
+        text-align: center;
+    }
+    .edu_text{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:768px){
+    
+
+    .edu_logo{
+        text-align: right;
+    }
+
+    .edu_text{
+        text-align: left;
+        margin-left:-15px;
+    }
+}
+
+.breadcrumb{
+    margin-bottom: 0px;
+}
+
+.breadcrumb-container{
+    background-color:#F5F5F5;
+}
+  </style>
+  <script>
+  function doResponse(){    
+    document.location.href = "/userresponse/?url="+document.location.href;
+  }
+
+      function SetCookie(name,value)
+    {
+        var Days = 1; 
+        var  argv  =  SetCookie.arguments;
+        var  argc  =  SetCookie.arguments.length;
+        var  expires  =  (argc  >  2)  ?  argv[2]  :  null;
+        var  path  =  '/';//(argc  >  3)  ?  argv[3]  :  null;
+        var  domain  =  (argc  >  4)  ?  argv[4]  :  null;
+        var  secure  =  (argc  >  5)  ?  argv[5]  :  false;
+        
+        var exp  = new Date();    
+        exp.setTime(exp.getTime() + Days*24*60*60*1000);
+        //document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+        document.cookie  =  name  +  "="  +  escape  (value)  +((expires  ==  null)  ?  ""  :  (";  expires="+  exp.toGMTString()))
+        +((path  ==  null)  ?  ""  :  (";  path="  +  path))  +((domain  ==  null)  ?  ""  :  (";  domain="  +  domain))
+        +((secure  ==  true)  ?  ";  secure"  :  "");
+    }
+    
+    function getCookie(name)   
+    {
+        var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+        if(arr != null) return unescape(arr[2]); return null;        
+    }
+    
+    function delCookie(name)
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval=getCookie(name);
+        if(cval!=null) document.cookie= name + "="+cval+";path=/;expires="+exp.toGMTString();
+        //SetCookie(name, '');
+    }
+
+function setLang(lang_code){
+    SetCookie('lang',lang_code);
+    document.location.reload();
+}
+
+  </script>
+
+
+
+  
+
+<style type="text/css">
+
+h6 {
+    width:700px;
+}
+
+.blue-link {
+    color:#337ab7 !important;
+    text-decoration: none;   
+}
+
+.resource-container h4 {
+    font-size: 22px;
+}
+
+.resource-container p {
+    font-size: 15px;
+}
+
+.linkbox{
+
+}
+
+.linkbox:hover{
+    background-color:#d4ecf7 !important;
+    color:#404040 !important;
+    text-decoration: none !important;
+}
+
+.linkbox:hover a{
+
+    background-color:#d4ecf7 !important;
+    color:#404040 !important;
+    text-decoration: none !important;
+}
+
+.item {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.item img {
+  width: 100%;
+}
+
+.linkbox p{
+
+}
+
+.linkbox_header > div {
+    background-color:#FFF;
+    color:#2980BB;
+    float:left;
+    font-size:16px;
+}
+
+.linkbox_header > div:first-child{
+    width:70%;
+    margin-left:5px;
+}
+
+.linkbox_header > div:nth-child(2){
+    width:20%;
+    margin-left:5px;
+}
+
+.linkbox_header > div:last-child{
+    width:0px;
+    clear:both;
+}
+
+.linkbox  > div{
+    float:left;
+    height:50px;
+}
+
+.linkbox  > div:first-child{
+    width:70%;
+    margin-left:5px;
+}
+
+.linkbox > div:nth-child(2){
+    width:20%;
+    margin-left:5px;
+}
+
+.linkbox > div:last-child{
+    width:0px;
+    clear:both;
+}
+
+.linkbox  >a > div{
+    float:left;
+}
+
+.linkbox  >a > div:first-child{
+    width:100px;
+    margin-left:0px;
+}
+
+.linkbox  >a > div:nth-child(2){
+    width:600px;
+    margin-left:5px;
+}
+
+.linkbox >a > div:nth-child(3){
+    width:210px;
+    margin-left:5px;
+}
+
+.linkbox >a > div:last-child{
+    width:0px;
+    clear:both;
+}
+
+#resource_menu >a > img:hover{
+    opacity: 0.7;
+}
+
+/*教學觀摩CSS.............START.......................................................*/
+.resource-container a, .resource-container a:visited, .resource-container a:link {
+    color:#404040;
+    text-decoration: none;
+}
+
+
+#resource_menu >a > img:hover{
+    opacity: 0.7;
+}
+
+.demo-title {
+  margin-bottom: 70px; 
+}
+
+.demo-content {
+  margin-bottom: 80px;
+
+}
+
+.demo-content .course-title {
+  
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #2993D1;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.demo-content table {
+    width: 100%;
+      border: 1px solid #2993D1;
+}
+.demo-content th {
+    min-width: 60px;
+    background-color: #eeeeee;
+}
+
+
+
+/*教學觀摩CSS............END.......................................................*/
+
+
+
+.resource-container h3{
+    color:#0086ce;
+}
+</style>
+
+<style>
+#footerlogo{
+    width:56px !important;
+    height:56px !important;
+}
+</style>
+</head>
+  
+<body>
+
+<div id="sb-site">
+<div class="top">
+  <div class="container">
+    <div class="row">
+    <div style="text-align:right;margin-right:100px;">
+    
+                最高管理者 (<a href="/myaccount/">個人資料</a>,   <a href="/logout/" >登出</a>) | 
+            
+    
+    
+    <a  href="javascript:doResponse();" >意見回饋</a>    
+    </div>
+    </div>
+    <div class="row">
+      
+      <div class="logo">
+       
+        <a href="/index_panel/" >
+          <img src="/static/rwd/images/logo.png" alt="" class="logo-img img-responsive">
+        </a>
+      
+      </div>      
+      
+      <div class="sb-toggle-right nav-toggle ">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div style="color: #0086ce;">menu</div>
+      </div>
+
+      
+    </div>
+</div>
+<div class="header margin-top10 hidden-mb ">
+  <div class="container">
+    <div class="row">
+    <ul class="nav navbar-nav">
+         
+        <li class="m1"><a href="/index_panel/" class="menu "><span class="glyphicon glyphicon-home"></span> 回首頁</a></li>
+      <li class="m2"><a href="/news/" class="menu ">最新消息</a></li>
+      <li class="m3"><a href="/intro/" class="menu ">中心簡介</a></li>      
+      <li class="m4"><a href="/courses/" class="menu ">課程專區</a></li>
+      <li class="m5"><a href="/panel/" class="menu ">學習歷程</a></li>
+      <li class="m6"><a href="/resource/" class="menu ">學習資源</a></li>
+      <li class="m7"><a href="/newuser/" class="menu ">新手上路</a></li> 
+      
+      <li class="m8"><a href="/mng/" class="menu ">系統管理</a></li> 
+      
+        
+    </ul>
+  </div>
+</div>
+</div>
+  </div>
+
+
+<div class="breadcrumb-container">
+    <div class="container">
+<ol class="breadcrumb">
+  <li><a href="/">首頁</a></li>
+  <li><a href="/resource/">學習資源</a></li>  
+  
+  <li><a href="#">教學資源</a></li>  
+  
+</ol>
+    </div>
+</div>
+
+
+
+    <!-- 教學觀摩 start ......................................................................-->
+        <div class="container resource-container">
+            <h3>相關網站</h3>
+            <!-- 1 ...................-->
+            <div class="demo-content">
+                <div class="course-title">
+                    解碼研究：人文社會科學研究倫理
+                </div>
+                <table>
+                    <tr>
+                        <th>授課教師</th>
+                        <td>天主教輔仁大學社會系－戴伯芬教授
+                        <br />天主教輔仁大學心理系－劉兆明教授</td>
+                    </tr>
+                    <tr>
+                        <th>教學對象</th>
+                        <td> 研究所4人</td>
+                    </tr>
+                    <tr>
+                        <th>資源下載</th>
+                        <td>
+
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/powtoon學習報告.mp4" target="_blank">powtoon學習報告（MP4檔，10.4MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/一分鐘——認識台灣研究倫理審查.mp4" target="_blank">一分鐘——認識台灣研究倫理審查（MP4檔，12.3MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/人猿混種實驗.mp4" target="_blank">人猿混種實驗（MP4檔，22.3MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/口吃研究.mp4" target="_blank">口吃研究（MP4檔，24MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/史丹佛監獄實驗.mp4" target="_blank">史丹佛監獄實驗（MP4檔，19MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/我當黑幫老大的一天.mp4" target="_blank">我當黑幫老大的一天（MP4檔，30.7MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/研究倫理審查制懶人包.mp4" target="_blank">研究倫理審查制懶人包（MP4檔，28.5MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                <a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A001/塔斯基吉梅毒實驗.mp4" target="_blank">塔斯基吉梅毒實驗（MP4檔，36.2MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 2 ...................-->
+            <div class="demo-content">
+                <div class="course-title">
+                    科技管理專題研討
+                </div>
+                <table>
+                    <tr>
+                        <th>授課教師</th>
+                        <td>國立交通大學科技管理研究所－黃仕斌副教授</td>
+                    </tr>
+                    <tr>
+                        <th>教學對象</th>
+                        <td>研究所29人</td>                        
+                    </tr>
+                    <tr>
+                        <th>資源下載</th>
+                        <td colspan="3" class="file-links">
+                            <ol>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/A002/論文引述引用與期刊資料庫查詢.pdf" target="_blank">論文引述引用與期刊資料庫查詢（PDF檔，2.87MB）</a>
+                                    <img src="http://ethics103.nctu.edu.tw/Ethics103/Files/mp4icon.png" alt="mp4icon" />
+                                </li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 3 ...................-->
+            <div class="demo-content">
+                <div class="course-title">
+                    工程與社會專題
+                </div>
+                <table>
+                    <tr>
+                        <th>授課教師</th>
+                        <td>南臺科技大學資訊工程系－李育強助理教授</td>
+                    <tr>
+                        <th>教學對象</th>
+                        <td>大學部21人</td>                        
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th>資源下載</th>
+                        <td colspan="3" class="file-links">
+                            <ol>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B002/學習單.pdf" target="_blank">學習單（PDF檔，205KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B002/學術不良文化.pdf" target="_blank">學術不良文化（PDF檔，1.17MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 4 ...................-->
+            <div class="demo-content">
+                <div class="course-title">
+                    高等研究法
+                </div>
+                <table>
+                    <tr>
+                        <th>授課教師</th>
+                        <td>國立臺灣體育運動大學體育學系暨體育研究所
+                            <br />聶喬齡助理教授</td>
+                    <tr>
+                        <th>教學對象</th>
+                        <td>研究所18人</td>                        
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th>資源下載</th>
+                        <td colspan="3" class="file-links">
+                            <b>Milgram服從研究再現：研究倫理的個案研究：</b>
+                            <ol>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程一/(a)特色課程（一）.pdf" target="_blank">特色課程（一）（PDF檔，791KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程一/(b)招募廣告.pdf" target="_blank">招募廣告（PDF檔，93KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程一/(c)Milgram_Experiment_advertising.pdf" target="_blank">Milgram_Experiment_advertising（PDF檔，97.2KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                            </ol>
+                            <br />
+                            <b>如果你是Milgram，你要如何進行服從研究：從服從的複製研究結果談起：</b>
+                            <ol>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程二/(a)特色課程（二）.pdf" target="_blank">特色課程（二）（PDF檔，480KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程二/(b)APA 倫理原則.pdf" target="_blank">APA 倫理原則（PDF檔，73.4KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程二/(c)CERTIFICATION OF COMPLIANCE WITH APA ETHICAL PRINCIPLES.pdf" target="_blank">CERTIFICATION OF COMPLIANCE WITH APA ETHICAL PRINCIPLES（PDF檔，23.4KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程二/(d)Replicating Milgram.pdf" target="_blank">Replicating Milgram（PDF檔，201KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/教學觀摩/104-01/B008/特色課程二/(e)特色課程（二）簡報.pdf" target="_blank">簡報（PDF檔，5.94MB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 5 ...................-->
+            <div class="demo-content">
+                <div class="course-title">
+                    研究倫理
+                </div>
+                <table>
+                    <tr>
+                        <th>授課教師</th>
+                        <td>臺北醫學大學醫療暨生物科技法律研究所
+                            <br />何建志副教授</td>
+                    <tr>
+                        <th>教學對象</th>
+                        <td>研究所50人</td>                        
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th>資源下載</th>
+                        <td colspan="3" class="file-links">
+                            <ol>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/校園學術倫理案例討論/104-01/A004/臺灣外科醫師採集病人檢體遭受懲戒.pdf" target="_blank">臺灣外科醫師採集病人檢體遭受懲戒（PDF檔，655KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/校園學術倫理案例討論/104-01/A004/臺灣狂犬病毒活體動物實驗是否必要？.pdf" target="_blank">臺灣狂犬病毒活體動物實驗是否必要？（PDF檔，636KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/校園學術倫理案例討論/104-01/A004/副教授使用學生論文申請研究計畫遭判刑6個月.pdf" target="_blank">副教授使用學生論文申請研究計畫遭判刑6個月（PDF檔，506KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 6 ...................-->
+            <div class="demo-content">
+                <div class="course-title">
+                    科技倫理
+                </div>
+                <table>
+                    <tr>
+                        <th>授課教師</th>
+                        <td>建國科技大學通識教育中心－劉啟民教授</td>
+                    <tr>
+                        <th>教學對象</th>
+                        <td>大學部59人</td>                        
+                    </tr>
+                    </tr>
+                    <tr>
+                        <th>資源下載</th>
+                        <td colspan="3" class="file-links">
+                            <ol>
+                                <li><a href="http://ethics103.nctu.edu.tw/Ethics103/Files/resource/teach/校園學術倫理案例討論/104-01/B001/不當研究行為的事例與探討.pdf" target="_blank">不當研究行為的事例與探討（PDF檔，402KB）</a><img src="http://ethics103.nctu.edu.tw/Ethics103/Files/pdficon.png" alt="pdficon" /></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--..................................ENd......................................................-->
+
+
+
+
+
+<!-- footer -->
+<footer id="footer" style="margin-top:20px;padding-bottom:20px;"> 
+  <div class="container">
+    <div class="row">
+      <div class="fnav hidden-sm hidden-xs">
+        <div class="fnav-title">計畫相關</div>
+        <ul>
+          <li><a href="/news/"><span>最新消息</span></a></li>
+          <li><a href="/intro/"><span>中心簡介</span></a></li>
+          <li><a href="http://ethics103.nctu.edu.tw/Ethics103/files/demo/u23demo/index.html"><span>課程試閱</span></a></li>          
+        </ul>
+      </div>
+      <div class="fnav hidden-xs hidden-sm">
+        <div class="fnav-title">學習資源</div>
+        <ul>
+          <li><a href="/resource/list/1/"><span>相關網站</span></a></li>
+          <li><a href="/resource/list/2/"><span>相關書籍</span></a></li>
+          <li><a href="/resource/list/4/"><span>案例探討</span></a></li>
+          <li><a href="/resource/list/3/"><span>世界主要大學研究倫理資訊</span></a></li>
+          <li><a href="/resource/list/6/"><span>教學資源</span></a></li>
+          <li><a href="/resource/list/7/"><span>課程發展計畫資料下載</span></a></li>
+        </ul>
+      </div>
+      <div class="fnav hidden-xs hidden-sm">
+        <div class="fnav-title">新手上路</div>
+        <ul>
+          <li><a href="/newuser/1/"><span>必修學生</span></a></li>
+          <li><a href="/newuser/2/"><span>Mandatory Students</span></a></li>
+          <li><a href="/newuser/3/"><span>註冊者</span></a></li>
+          <li><a href="/newuser/4/"><span>必修學校管理者</span></a></li>
+        </ul>
+      </div>
+      <div class="fnav hidden-xs hidden-sm">
+        <div class="fnav-title">其他</div>
+        <ul>
+          <li><a href="/faq/1/"><span>常見問題</span></a></li>
+          <li><a href="/joinus/"><span>加入我們</span></a></li>
+          <li><a href="/contactus/"><span>聯絡我們</span></a></li>
+          <li><a href="javascript:doResponse();"><span>意見回饋</span></a></li>
+          <li><a href="/policy/"><span>隱私權與資安政策</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+    <div class="clearfix"></div>
+  <div class="container">
+    <div class="row" style="margin-top:20px;">
+        <div class="col-sm-12 col-md-12" style="text-align:center;">
+        <span style="height:56px;display:inline-block;">
+        
+        </span>
+        <span style="height:56px;display:inline-block;text-align:left;vertical-align: middle;padding-top:8px; ">        
+        
+        教育部校園學術倫理教育與機制發展計畫<Br/>
+        網站維運：國立交通大學人文與社會科學研究中心        
+        
+        </span>
+        </div>
+    </div>
+  </div>
+    <div class="copy">        
+        <div>
+        Copyright © 2012-2016 
+        </div>
+    </div>
+</footer>
+
+
+
+</div>
+
+<!-- mobile slide bar  start................................................................. -->
+<div class="sb-slidebar sb-right">
+    <ul >
+     
+        <li class=""><a href="/panel/" class="menu "><span class="glyphicon glyphicon-home"></span> 回首頁</a></li>
+      <li class=""><a href="/news/" class="menu ">最新消息</a></li>
+      <li class=""><a href="/intro/" class="menu ">中心簡介</a></li>
+      <li class=""><a href="/courses/" class="menu ">課程專區</a></li>
+      <li class=""><a href="/panel/" class="menu ">學習歷程</a></li>
+      <li class=""><a href="/resource/" class="menu ">學習資源</a></li>
+      <li class=""><a href="/newuser/" class="menu ">新手上路</a></li> 
+      
+      <li class=""><a href="/mng/" class="menu ">系統管理</a></li> 
+      
+              
+    </ul>
+</div>
+
+<!-- Slidebars -->
+  <script src="https://ethics.nctu.edu.tw/static/bootstrap/js/slidebars.min.js"></script>
+      <!-- Slidebars CSS -->
+  <link rel="stylesheet" href="https://ethics.nctu.edu.tw/static/bootstrap/css/slidebars.min.css">
+    <script>
+
+      (function($) {
+        $(document).ready(function() {
+          $.slidebars({
+        siteClose: true, // true or false
+        disableOver: 992, // integer or false
+        hideControlClasses: true, // true or false
+        scrollLock: false // true or false
+      });
+        });
+      }) (jQuery);
+
+    </script>
+
+
+</body>
+</html>
+
+
+
